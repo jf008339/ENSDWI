@@ -1,0 +1,17 @@
+conf t
+!
+system
+  system-ip             {{ system_ip }}
+  site-id               {{ site_id }}
+  organization-name     {{ organization-name }}
+  vbond                 {{ vbond-fqdn}}
+!
+vpn 0
+dns 8.8.8.8 primary
+interface {{ wan_interface_name }}
+  ip address {{ wan_ip_address }}
+    tunnel-interface
+      color default
+      encapsulation ipsec
+ip route 0.0.0.0/0 {{ wan_default_gateway }}
+commit
