@@ -1,0 +1,30 @@
+pnpa service discovery stop
+!
+config-transaction
+!
+system
+  system-ip             {{ system_ip }}
+  site-id               {{ site_id }}
+  organization-name     {{ organization-name }}
+  vbond                 {{ vbond-fqdn}}
+!
+ip route 0.0.0.0/0 {{ wan_default_gateway }}
+ip name-server 8.8.8.8
+!
+interface {{ wan_interface_name }}
+  no shutdown
+  ip address {{ wan_ip_address }}
+!
+interface Tunnel1
+no shutdown
+ip unnumbered {{ wan_interface_name }}
+tunnel source {{ wan_interface_name }}
+tunnel mode sdwan
+!
+sdwan
+  interface {{ wan_interface_name }}
+    tunnel-interface
+      encapsulation ipsec
+      color default
+!
+commit
