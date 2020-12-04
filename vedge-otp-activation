@@ -1,0 +1,1 @@
+request vedge-cloud activate chassis-number {{ chassis_number }} token {{ token }}
