@@ -24,6 +24,15 @@ Verify Localized Policies
 ```
 show sdwan running-config | sec policy|route-map
 ```
+BGP
+```
+show bgp vpnv4 un all
+show bgp vpnv4 un all summ
+```
+### vSmart
+```
+show omp routes {{ prefix }} [ received | advertised ] { detail }
+```
 
 ## Real Time Commands
 
