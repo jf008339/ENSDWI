@@ -22,10 +22,16 @@ show bfd ?
  sessions           List of BFD sessions
  summary            BFS summary
  tloc-summary-list  Per-TLOC BFD Summary
+```
 ### cEdge CSR1000v
 OTP Activation
 ```
 request platform software sdwan vedge_cloud activate chassis-number {{ chassis_number }} token {{ token }}
+```
+OMP
+```
+show omp tloc-paths
+show omp route
 ```
 Check certificate details:
 ```
