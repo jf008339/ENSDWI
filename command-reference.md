@@ -20,6 +20,13 @@ OTP Activation
 ```
 request platform software sdwan vedge_cloud activate chassis-number {{ chassis_number }} token {{ token }}
 ```
+Check certificate details:
+```
+show control local-properties
+showcertificate validity
+show certificate installed
+show certificate root-ca-cert
+```
 Verify Localized Policies
 ```
 show sdwan running-config | sec policy|route-map
