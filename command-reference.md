@@ -15,6 +15,13 @@ Verifiy Localized/Centralized Policies
 ```
 show run policy
 ```
+BFD Session Summary
+```
+show bfd ?
+ history            History of BFD sessions
+ sessions           List of BFD sessions
+ summary            BFS summary
+ tloc-summary-list  Per-TLOC BFD Summary
 ### cEdge CSR1000v
 OTP Activation
 ```
