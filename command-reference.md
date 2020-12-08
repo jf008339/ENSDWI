@@ -44,6 +44,18 @@ Verify Localized Policies
 ```
 show sdwan running-config | sec policy|route-map
 ```
+To validate which packets are blocked by an access list, the correct command is:
+```
+show policy access-list-counters
+```
+See the data policy and any configured counters incrementing to ensure traffic is matching the proper sequence rules.
+```
+show policy data-policy filter
+```
+See the next-hop of the specified application will be shown.
+```
+show policy service-path
+```
 BGP
 ```
 show bgp vpnv4 un all
